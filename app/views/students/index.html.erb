@@ -4,6 +4,9 @@
   <section id="student-<%= student.id %>" >
     <p>Name: <%= student.name %></p>
     <p>Cohort: <%= student.cohort_number %></p>
-    <p>Instructor: <%= student.teachers.pluck(:name).join %></p>
+    <p>Instructor: <% student.teachers.each do |teacher| %>
+      <%= link_to "#{teacher.name}", "/teachers/#{teacher.id}" %>
+      <% end %>
+    </p>
   </section>
 <% end %>
