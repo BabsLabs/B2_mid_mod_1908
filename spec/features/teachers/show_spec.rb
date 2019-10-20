@@ -24,8 +24,7 @@ describe "Instructor show page" do
     expect(page).to have_content('Bette Davis')
     expect(page).to have_content('Elvis Presley')
     expect(page).to have_content('Buddy Holly')
-    expect(page).to have_content('Average Age: 30')
-
+    expect(page).to have_content('Average Student Age: 30')
 
   end
 end
